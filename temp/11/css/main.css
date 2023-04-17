@@ -1,0 +1,3602 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --main-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+    --rgb-color: rgba(0 0 0 / 60%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    text-transform: capitalize;
+    transition: all 0.2s ease-out;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    height: 6000px;
+    /* background-color: #000; */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    margin-bottom: 70px;
+    font-size: 40px;
+
+    font-weight: normal;
+    text-transform: uppercase;
+
+    position: relative;
+}
+
+.heading h2::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+}
+
+.heading h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -38px;
+    transform: translateX(-50%);
+
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+
+    border: 2px solid #333;
+    background-color: #fff;
+}
+
+.heading p {
+    width: 550px;
+    max-width: 100%;
+    margin: 0 auto 100px;
+
+    line-height: 2;
+    color: #777;
+}
+
+
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#01)) */
+
+/* 001.__________________(header)_*/
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+/* 002._________(container)__(11)*/
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 97px;
+    position: relative;
+}
+
+header .container::after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: 0;
+
+    height: 1px;
+    width: calc(100% - 30px);
+    background-color: #a2a2a2;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(A)__()*/
+
+/* 004._________(img)__()*/
+header .logo img {
+    height: 40px;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(nav)__()*/
+header nav {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(ul)__()*/
+header nav .navbar {
+    display: flex;
+}
+
+@media (max-width: 767px) {
+    header nav .navbar {
+        display: none;
+    }
+}
+
+/* js */
+/* (navbar (toggle("active"))) */
+
+@media (max-width: 767px) {
+    header nav .navbar.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0 0 0 / 50%);
+    }
+}
+
+
+/* 005._________(li)__()*/
+
+/* 006._________(A)__()*/
+header nav .navbar li a {
+    display: block;
+    padding: 40px 10px;
+
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    color: #fff;
+
+    position: relative;
+    z-index: 2;
+}
+
+header nav .navbar li a.active,
+header nav .navbar li a:hover {
+    color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+@media (max-width: 767px) {
+    header nav .navbar li a {
+        padding: 15px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(form)__()*/
+header nav .form {
+    width: 40px;
+    height: 30px;
+    margin-left: 30px;
+
+    border-left: 1px solid #fff;
+    position: relative;
+}
+
+/* 005._________(i)__()*/
+header nav .form i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+header nav .form i:hover {
+    color: var(--main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(form)__(33)*/
+header nav #menu_hamburger {
+    padding: 10px 13px;
+    font-size: 22px;
+
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--main-color);
+    background-color: #fff;
+}
+
+/* js */
+/* (menu_hamburger برجر=(onclick("navbar"))) */
+
+@media (min-width: 768px) {
+    header nav #menu_hamburger {
+        display: none;
+    }
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#02)) */
+
+/* 001.__________________(landing)_*/
+.landing {
+    min-height: 100vh;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+
+    position: relative;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__(11)*/
+.landing .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--rgb-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(text)__(22)*/
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+    width: 50%;
+    padding: 50px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    color: #fff;
+    background-color: var(--transparent-color);
+}
+
+/* ===== (767) ===== */
+@media (max-width: 767px) {
+    .landing .text {
+        width: 100%;
+    }
+}
+
+/* 003._________(content)__()*/
+.landing .text .content {
+    max-width: 500px;
+}
+
+/* ===== (767) ===== */
+@media (max-width: 767px) {
+    .landing .text .content {
+        max-width: 100%;
+    }
+}
+
+/* 004._________(h2)__()*/
+.landing .text .content h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+/* 004._________(p)__()*/
+.landing .text .content p {
+    font-size: 14px;
+    line-height: 2;
+}
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(i)__(33)*/
+.landing .change_background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    color: #ddd;
+}
+
+/* ===== (767) ===== */
+@media (max-width: 767px) {
+    .landing .change_background {
+        display: none;
+    }
+}
+
+.landing .fa-angle-left {
+    left: 30px;
+}
+
+.landing .fa-angle-right {
+    right: 30px;
+}
+
+
+/* ======= فكرتي ========= */
+@media (min-width: 768px) {
+
+
+    .landing .meee_e {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+
+
+    .landing .meee_e:hover {
+        background-color: #fff;
+        color: var(--main-color);
+    }
+
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(ul)__(33)*/
+.landing .bullets {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
+/* 003._________(li)__()*/
+.landing .bullets li {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+/* 003._________(active)__()*/
+.landing .bullets .active {
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#03)) */
+
+/* 001.__________________(services)_*/
+.services {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 002._________(container)__(11)*/
+
+/* ===== (768) ===== */
+@media (min-width: 768px) {
+    .services .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+        column-gap: 40px;
+        row-gap: 60px;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.services .container .box {
+    display: flex;
+}
+
+/* ===== (767) ===== */
+@media (max-width :767px) {
+    .services .container .box {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}
+
+/* 004._________(i)__()*/
+.services .container .box i {
+    margin-right: 50px;
+}
+
+/* ===== (767) ===== */
+@media (max-width :767px) {
+    .services .container .box i {
+        margin: 0 0 30px;
+    }
+}
+
+/* 004._________(content)__()*/
+
+/* 005._________(h3)__()*/
+.services .container .box .content h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+
+/* 005._________(p)__()*/
+.services .container .box .content p {
+    line-height: 2;
+    color: #777;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#04)) */
+
+/* 001.__________________(design)_*/
+.design {
+    display: flex;
+    align-items: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: 600px;
+
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+
+    overflow: hidden;
+    position: relative;
+}
+
+.design::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--rgb-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(image)__(11)*/
+.design .image {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    flex: 1;
+}
+
+/* ===== (767) ===== */
+@media (max-width :767px) {
+    .design .image {
+        display: none;
+    }
+}
+
+/* 003._________(img)__()*/
+.design .image img {
+    position: relative;
+    bottom: -150px;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(content)__(22)*/
+.design .content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+
+    color: #fff;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+/* 003._________(h2)__()*/
+.design .content h2 {
+    margin-bottom: 40px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* 003._________(ul)__()*/
+
+/* 004._________(li)__()*/
+.design .content ul li {
+    padding: 15px 0;
+}
+
+.design .content ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+
+    font-weight: 900;
+    margin-right: 20px;
+
+    position: relative;
+    top: 1px;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#05)) */
+
+/* 001.__________________(portfolio)_*/
+.portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__(22)*/
+
+/* 003._________(ul)__()*/
+.portfolio .container .shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+/* 004._________(li)__()*/
+.portfolio .container .shuffle li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* 004._________(active)__()*/
+.portfolio .container .shuffle li:hover,
+.portfolio .container .shuffle li.active {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(img_container)__(33)*/
+.portfolio .img_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+/* 003._________(box)__()*/
+.portfolio .img_container .box {
+    overflow: hidden;
+    position: relative;
+}
+
+@media (min-width :768px) {
+    .portfolio .img_container .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1199px) {
+    .portfolio .img_container .box {
+        flex-basis: 25%;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(img)__()*/
+.portfolio .img_container .box img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+.portfolio .img_container .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(caption)__()*/
+.portfolio .img_container .box .caption {
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+
+    width: 100%;
+    padding: 20px;
+
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+.portfolio .img_container .box:hover .caption {
+    bottom: 0;
+}
+
+/* 005._________(h4)__()*/
+.portfolio .img_container .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+/* 005._________(p)__()*/
+.portfolio .img_container .box .caption p {
+    color: var(--main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(A)__(44)*/
+.portfolio .more {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 15px 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#06)) */
+
+/* 001.__________________(video)_*/
+.video {
+    position: relative;
+}
+
+.video::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 40%);
+}
+
+/* 002._________(video)__(11)*/
+.video video {
+    width: 100%;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(text)__(22)*/
+.video .text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 100%;
+    padding: 50px;
+
+    text-align: center;
+    color: white;
+    background-color: var(--transparent-color);
+}
+
+/* 003._________(h2)__()*/
+.video .text h2 {
+    margin: 0 0 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* 003._________(p)__()*/
+.video .text p {
+    margin-bottom: 30px;
+}
+
+/* 003._________(button)__()*/
+.video .text button {
+    padding: 10px 20px;
+
+    border: none;
+    text-transform: uppercase;
+
+    color: white;
+    background-color: black;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#07)) */
+
+/* 001.__________________(fff)_*/
+.about {
+    padding-top: 100px;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__(22)*/
+
+/* 003._________(img)__()*/
+.about .container img {
+    position: relative;
+    bottom: -120px;
+
+    margin-top: -120px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .about .container img {
+        bottom: -60px;
+        margin-top: -60px;
+    }
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#08)) */
+
+/* 001.__________________(stats)_*/
+.stats {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-image: url(../images/stats.png);
+    background-size: cover;
+
+    position: relative;
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+
+/* 002._________(container)__(22)*/
+.stats .container {
+    display: flex;
+    flex-wrap: wrap;
+
+    position: relative;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box)__()*/
+.stats .container .box {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+/* ===== (767) ===== */
+@media (max-width: 767px) {
+    .stats .container .box {
+        flex-basis: 100%;
+    }
+}
+
+/* ===== (768) ===== */
+@media (min-width: 768px) {
+    .stats .container .box {
+        flex-basis: 50%;
+    }
+}
+
+/* ===== (992) ===== */
+@media (min-width: 992px) {
+    .stats .container .box {
+        flex-basis: 25%;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(i)__()*/
+.stats .container .box i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 30px;
+
+    border-radius: 50%;
+    background-color: black;
+}
+
+/* 004._________(number)__()*/
+.stats .container .box .number {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0 20px;
+}
+
+/* 004._________(p)__()*/
+.stats .container .box p {
+    font-size: 14px;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#00)) */
+
+/* 001.__________________(fff)_*/
+.our_skills {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 002._________(container)__()*/
+.our_skills .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+@media (min-width: 992px) {
+
+    .our_skills .container .testimonials {
+        flex-basis: 45%;
+    }
+
+    .our_skills .container .skills {
+        flex-basis: 45%;
+    }
+}
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(testimonials)__()*/
+
+/* 004._________(h3)__()*/
+.our_skills .testimonials h3 {
+    margin: 0 0 30px;
+    text-align: center;
+
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* 004._________(p)__()*/
+.our_skills .testimonials p {
+    margin-bottom: 60px;
+    text-align: center;
+
+    line-height: 2;
+    color: #777;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+.our_skills .testimonials .content {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+@media (max-width : 767px) {
+    .our_skills .testimonials .content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* 005._________(img)__()*/
+.our_skills .testimonials .content img {
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 50%;
+}
+
+@media (max-width : 767px) {
+    .our_skills .testimonials .content img {
+        margin: 0 auto 20px;
+    }
+}
+
+
+/* 005._________(text)__()*/
+.our_skills .testimonials .content .text {
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;
+}
+
+/* 006._________(p)__()*/
+.our_skills .testimonials .content .text p {
+    margin-bottom: 10px;
+    font-size: 14px;
+
+    text-align: right;
+    color: #777;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(bullets)__()*/
+.our_skills .testimonials .bullets {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* 005._________(li)__()*/
+.our_skills .testimonials .bullets li {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+
+    border-radius: 50%;
+    border: 1px solid #aaa;
+}
+
+/* 005._________(active)__()*/
+.our_skills .testimonials .bullets li.active {
+    border-color: var(--main-color);
+    background-color: var(--main-color);
+}
+
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(skills)__()*/
+
+/* 004._________(h3)__()*/
+.our_skills .skills h3 {
+    margin: 0 0 30px;
+    text-align: center;
+
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* 004._________(p)__()*/
+.our_skills .skills p {
+    margin-bottom: 60px;
+    text-align: center;
+
+    line-height: 2;
+    color: #777;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 004._________(content)__()*/
+.our_skills .skills .prog-holder {
+    margin-bottom: 40px;
+}
+
+/* 005._________(h4)__()*/
+.our_skills .skills .prog-holder h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* 005._________(prog)__()*/
+.our_skills .skills .prog-holder .prog {
+    background-color: #dedadc;
+    height: 30px;
+}
+
+/* 006._________(span)__()*/
+.our_skills .skills .prog-holder .prog span {
+    display: block;
+    height: 100%;
+
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.our_skills .skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    position: absolute;
+    top: -40px;
+    right: -18px;
+
+    width: 40px;
+    padding: 4px 0;
+    text-align: center;
+
+    border-radius: 4px;
+    color: white;
+    background-color: black;
+}
+
+.our_skills .skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    right: -8px;
+
+    border-width: 8px;
+    border-style: solid;
+    border-color: black transparent transparent;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#10)) */
+
+/* 001.__________________(quote)_*/
+.quote {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-image: url("../images/quote.jpg");
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+
+    position: relative;
+}
+
+.quote::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 75%);
+}
+
+/* 002._________(container)__()*/
+.quote .container {
+    position: relative;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(q)__()*/
+.quote .container q {
+    margin-bottom: 20px;
+    font-size: 30px;
+    display: block;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#11)) */
+
+/* 001.__________________(pricing)_*/
+.pricing {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 002._________(container)__()*/
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(box_container)__()*/
+.pricing .box_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* 004._________(box)__()*/
+.pricing .box_container .box {
+    background-color: #fcfcfc;
+    text-align: center;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(head)__()*/
+.pricing .box_container .box .head {
+    padding: 40px 20px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+/* 006._________(h3)__()*/
+.pricing .box_container .box .head h3 {
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+/* 006._________(span)__()*/
+.pricing .box_container .box .head span {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+
+
+.pricing .box_container .box .head span::before {
+    content: "$";
+    position: relative;
+    top: -40px;
+
+    margin-right: 15px;
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.pricing .box_container .box .head span::after {
+    content: "/Mo";
+    position: relative;
+    right: -15px;
+    font-size: 20px;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(ul)__()*/
+.pricing .box_container .box ul {
+    border-bottom: 1px solid var(--main-color);
+}
+
+/* 006._________(ul)__()*/
+.pricing .box_container .box ul li {
+    padding: 20px;
+    position: relative;
+}
+
+.pricing .box_container .box ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    width: 140px;
+    height: 1px;
+    background-color: var(--main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 005._________(foot)__()*/
+
+/* 006._________(A)__()*/
+.pricing .box_container .box .foot a {
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: 30px auto;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(p)__()*/
+.pricing .contact_text {
+    margin: 50px auto 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* 003._________(A)__()*/
+.pricing .contact_link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#12)) */
+
+/* 001.__________________(subscribe)_*/
+.subscribe {
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+    color: white;
+
+    position: relative;
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+
+/* 002._________(container)__()*/
+.subscribe .container {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+}
+
+@media (max-width: 991px) {
+    .subscribe .container {
+        flex-direction: column;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(form)__()*/
+.subscribe .container form {
+    display: flex;
+    position: relative;
+
+    width: 500px;
+    /* max-width: 100%; */
+}
+
+/* 004._________(i)__()*/
+.subscribe .container form i {
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+}
+
+/* 004._________(input)__()*/
+.subscribe .container form input[type="email"] {
+    width: calc(100% - 130px);
+    padding: 20px 20px 20px 60px;
+
+    background: none;
+    border-right: none;
+
+    border: 1px solid white;
+    caret-color: var(--main-color);
+}
+
+/* 004._________(input)__()*/
+.subscribe .container form input[type="submit"] {
+    width: 130px;
+    padding: 10px 20px;
+
+    border-left: none;
+    text-transform: uppercase;
+
+    color: white;
+    border: 1px solid white;
+    background-color: var(--main-color);
+}
+
+.subscribe form input[type="email"]:focus,
+.subscribe form input[type="submit"]:focus {
+    outline: none;
+}
+
+.subscribe form ::placeholder {
+    color: white;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(p)__()*/
+.subscribe p {
+    line-height: 2;
+    margin-left: 50px;
+}
+
+@media (max-width: 991px) {
+    .subscribe p {
+        margin: 30px 0 0;
+    }
+}
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#13)) */
+
+/* 001.__________________(contact)_*/
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* 002._________(container)__()*/
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ===== (767) ===== */
+@media (max-width :767px) {
+    .contact .container {
+        flex-direction: column;
+    }
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(form)__()*/
+.contact .container form {
+    flex-basis: 70%;
+}
+
+/* 004._________(input)__()*/
+.contact .container form .main_input {
+    display: block;
+    width: 100%;
+
+    margin-bottom: 30px;
+    padding: 20px;
+
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+/* 004._________(textarea)__()*/
+.contact .container form textarea.main_input {
+    height: 200px;
+}
+
+/* 004._________(input)__()*/
+.contact .container form input[type="submit"] {
+    display: flex;
+    margin-left: auto;
+    padding: 20px;
+
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    color: white;
+    background-color: var(--main-color);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(info)__()*/
+.contact .container .info {
+    flex-basis: 25%;
+}
+
+/* ===== (767) ===== */
+@media (max-width : 767px) {
+    .contact .container .info {
+        order: -1;
+        text-align: center;
+    }
+}
+
+
+
+
+/* 004._________(h4)__()*/
+.contact .container .info h4 {
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* 004._________(span)__()*/
+.contact .container .info .phone {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #777;
+}
+
+/* 004._________(h4)__()*/
+.contact .container .info h4:nth-of-type(2) {
+    margin-top: 90px;
+}
+
+/* ===== (767) ===== */
+@media (max-width : 767px) {
+    .contact .container .info h4:nth-of-type(2) {
+        margin-top: 30px;
+    }
+}
+
+/* 004._________(address)__()*/
+.contact .container .info address {
+    color: #777;
+    line-height: 2;
+}
+
+/* ===== (767) ===== */
+@media (max-width : 767px) {
+    .contact.container .info address {
+        margin-bottom: 40px;
+    }
+}
+
+
+/* ==================== */
+
+
+/* =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =000000000000000000000000000000000000000000000000000000000000000
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =  
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    =
+    ==================== ((#00)) */
+
+/* 001.__________________(footer)_*/
+.footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    background-image: url("../images/subscribe.jpg");
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 002._________(container)__()*/
+.footer .container {
+    position: relative;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(img)__()*/
+.footer img {
+    margin-bottom: 20px;
+}
+
+/* 003._________(p)__()*/
+.footer p:not(.copyright) {
+    width: fit-content;
+
+    margin: 20px auto;
+    padding: 20px;
+
+    font-size: 22px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(social_icons)__()*/
+
+/* 004._________(i)__()*/
+.footer .social_icons i {
+    padding: 10px 15px;
+}
+
+/* =
+=
+=
+=
+=
+=
+=
+=
+=
+=
+=
+= */
+
+/* 003._________(p)__()*/
+.footer .copyright {
+    margin-top: 60px;
+}
+
+/* 004._________(span)__()*/
+.footer .copyright span {
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+/* ==================== */

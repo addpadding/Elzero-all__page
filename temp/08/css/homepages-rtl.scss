@@ -1,0 +1,99 @@
+@import "scss/helpers/variables";
+
+$float-left: right;
+$float-right: left;
+
+$text-right: left;
+$text-left: right;
+
+.header {
+  .logo {
+    @media #{$minMedium} {
+      float: $float-left;
+      text-align: $text-left;
+    }
+    .the-toggler {
+      right: auto;
+      left: 15px;
+    }
+  }
+  .navbar {
+    @media #{$minMedium} {
+      float: $float-left;
+    }
+    li {
+      float: $float-left;
+      @media #{$maxMobile} {
+        text-align: $text-left;
+      }
+    }
+  }
+}
+//=================================================================
+// Start services
+
+.services {
+  .services-box {
+    @media #{$minMedium} {
+      float: $float-left;
+    }
+  }
+}
+
+// End services
+// ===================
+// Start Our players
+
+.our-players {
+  .players-box {
+    @media #{$minSmall} {
+      float: $float-left;
+    }
+    @media #{$minMedium} {
+      text-align: $text-left;
+    }
+  }
+}
+
+// End Our players
+//===================
+// Start lorem ipsum
+
+.lorem-ipsum {
+  @media #{$minSmall} {
+    .lorem-box {
+      float: $float-left;
+    }
+  }
+}
+//===================
+
+.footer {
+  .contact {
+    float: $float-left;
+  }
+  .gallery {
+    .img-box {
+      img {
+        @media #{$minSmall} {
+          float: $float-left;
+        }
+      }
+      .text {
+        @media #{$minSmall} {
+          float: $float-left;
+        }
+      }
+    }
+  }
+
+  .cobyright {
+    .text,
+    .author {
+      float: $float-left;
+    }
+    .author {
+      text-align: $text-right;
+    }
+  }
+}
